@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1C"
+
+
+    >
+
+    <VideoView
+        android:id="@+id/videoBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- 🔹 Titre principal -->
+            <TextView
+                android:id="@+id/titleCrypto"
+                android:layout_width="321dp"
+                android:layout_height="49dp"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="28dp"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="💰 Convertisseur Crypto"
+                android:textColor="#F0F6FC"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_dark_card"
+                android:padding="20dp"
+                android:elevation="8dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/inputAmountCrypto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrer le montant"
+                    android:inputType="numberDecimal"
+                    android:textColor="#F0F6FC"
+                    android:textColorHint="#9BA1A6"
+                    android:padding="14dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:layout_marginBottom="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_dark_spinner"
+                        android:layout_marginEnd="8dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTo"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_dark_spinner"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnConvertCrypto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Convertir"
+                    android:textStyle="bold"
+                    android:textColor="#F0F6FC"
+                    android:backgroundTint="#b59b45"
+                    android:elevation="6dp"
+                    android:padding="12dp" />
+
+                <TextView
+                    android:id="@+id/resultCrypto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Résultat :"
+                    android:textColor="#F0F6FC"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:padding="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
